@@ -1,0 +1,50 @@
+#include<stdio.h>
+int main()
+{float a,b;
+int i,c;
+while(1){
+    printf("Enter any number whose greatest integer function(gif) you want to calculate = ");
+    scanf("%f",&a);
+    printf("--------------------------------\n");
+    if (a>0)
+    {
+        for (i=0;i<=a;i++)
+        {
+            b=a-i;
+            if(b>0 && b<1) 
+            {
+                printf("The GIF value for %.2f is = [ %d ]",a,i);
+                break;
+            }
+            else if (b==0)
+            {
+                printf("The GIF value for %.2f is = [ %d ]",a,i);
+            break;   
+            }
+        }
+    }
+    else if(a<0)
+    {   c= (int)a ;
+        for (i=a;i<=c;i--){
+        b=a-i;
+        if (b>0 && b<1)
+        {
+            printf("The GIF value for %.2f is = [ %d ]",a,i);
+            break;
+        }
+        else if (b==0)
+            {
+                printf("The GIF value for %.2f is = [ %d ]",a,i);
+                break;
+            }
+        }
+    }
+    else if (a==0)
+    {
+        printf("The GIF value for %.0f is = [ %d ]",a,i);
+    }
+   printf("\n\n");
+}
+    return 0;
+}
+   

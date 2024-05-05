@@ -1,0 +1,71 @@
+//This is a code for armstrong numbers.....
+
+#include <stdio.h>
+int arm(int a){
+    int c,sum=0;
+    if(a==0){
+        return 0;}
+    c=a%10;
+    sum=sum+(c*c*c);
+    return sum + arm(a / 10);
+}
+int main()
+{
+    int b,ret;
+    printf("enter the number = ");
+    scanf("%d",&b);
+    ret=arm(b);
+    if(ret==b){
+        printf("the number is a Armstrong number");
+    }
+    else{
+        printf("not an armstrong number ");
+    }
+    return 0;
+}
+
+
+
+
+//Armstrong numbers with n number of terms.....
+#include <stdio.h>
+int arm(int a){
+    int c,sum=0;
+    if(a==0){
+        return 0;}
+    c=a%10;
+    sum=sum+(c*c*c);
+    return sum + arm(a / 10);
+}
+int main()
+{
+    int ret,n,i,j=0,k=0;
+    printf("Enter the number of arguments you want to pass = ");
+    scanf("%d",&n);
+    int b[n],arms[n],narms[n];
+    for(i=0;i<n;i++){
+        printf("enter the number = ");
+    scanf("%d",&b[i]);
+    }
+    for(i=0;i<n;i++){
+    ret=arm(b[i]);
+    if(ret==b[i]){
+        arms[j]=b[i];
+        j=j+1;
+    }
+    else{
+        narms[k]=b[i];
+        k=k+1;
+    }
+    }
+    printf("-----------------------------\n");
+    printf("The Armstrong numbers are = \n");
+    for(i=0;i<j;i++){
+        printf("%d,\t",arms[i]);
+    }
+    printf("\n\nThe non-Armstrong numbers are = \n");
+    for(i=0;i<k;i++){
+        printf("%d,\t",narms[i]);
+    }
+    return 0;
+}

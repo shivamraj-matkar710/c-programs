@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main() 
+
+{int a,prod=1,i=1;
+
+    printf("Factorial of a number represented by:-\n n!=n(n-1)(n-2)(n-3)------------3x2x1 \n\n");
+    printf("enter the number = ");
+    scanf("%d",&a);
+    if (a==0)
+    {
+        printf("the value for 0! = 1 ");
+    }
+    else
+    {
+        while(i<=a)
+        {
+            prod=prod*i;
+            i++;
+        }
+        printf("The value for %d! = %d ",a,prod);
+        
+    }
+    printf("\n--------------------------------------");
+    printf("\n");
+
+    return 0;
+}
